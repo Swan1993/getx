@@ -1,6 +1,6 @@
-import 'package:example/screen/home.dart';
 import 'package:flutter/material.dart';
 import 'package:getx/getx.dart';
+import 'home.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -12,17 +12,6 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
-
-  void _login() {
-    // Here you can add the logic to verify the data
-    print('Username: ${_usernameController.text}');
-    print('Password: ${_passwordController.text}');
-    // Navigate to the next page after verification
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => DashboardPage()),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
